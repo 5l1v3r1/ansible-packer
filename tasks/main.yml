@@ -43,7 +43,7 @@
     - /var/cache/packer
 
 - name: fetch packer
-  get_url: url=https://dl.bintray.com/mitchellh/packer/{{ packer_pkg }}
+  get_url: url={{ packer_base_url }}{{ packer_pkg }}
            dest=/var/cache/packer/{{ packer_pkg }}
   when: packer_install_needed
 
